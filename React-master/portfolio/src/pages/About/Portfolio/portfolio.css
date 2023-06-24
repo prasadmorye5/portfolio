@@ -1,0 +1,118 @@
+.portfolio_categories{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    padding: 0.5rem 0;    
+}
+
+.btn.cat_btn{
+    text-transform: capitalize;
+    transition: var(--transition);
+}
+.btn.cat_btn:hover{
+  transform: translateY(0);
+}
+
+
+
+
+
+  /* styling for projects */
+.portfolio_projects{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 3rem;
+    align-items: start;
+    overflow-y: hidden;
+}
+.card.portfolio_project{
+    margin-top: 3rem;
+    height: 90%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    animation: animateprojects 800ms ease-in forwards;
+}
+@keyframes animateprojects {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+
+}
+.portfolio_image{
+    /* width: 100%; */
+    /* height: fit-content;
+    height: 200px;
+    min-height: 7rem;
+    max-height: 15rem; */
+    background: var(--color-light);
+    border-radius: var(--border-radius-2);
+    margin-bottom: 1.5rem;
+    display: grid;
+    place-items: center;
+    /* overflow: hidden; */
+}
+.portfolio_image img{
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.portfolio_project p{
+    margin: 1rem 0;
+    width: 100%;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.portfolio_project_cta{
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    
+}
+.portfolio_project:hover .btn.sm{
+    border-color: white;
+}
+
+.portfolio_project:hover .btn.sm.primary{
+    background: transparent;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+
+/* media-queries */
+
+@media only screen and (max-width: 1024px) {
+
+        .portfolio_projects{
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+    
+}
+
+@media only screen and (max-width: 650px) {
+        .portfolio_projects{
+            
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .para {
+            width: 70%;
+            margin-bottom: 2.5rem;
+            
+        }
+    .portfolio_categories{
+        gap: 0.6rem;
+    }
+    .btn.cat_btn{
+        padding: 0.7rem 0.8rem;
+    }
+}

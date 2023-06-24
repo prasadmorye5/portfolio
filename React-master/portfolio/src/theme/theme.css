@@ -1,0 +1,98 @@
+.card.theme_modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background: var(--color-light);
+    transform: translate(-50%,-50%);
+    z-index: 200;
+    text-align: center;
+    box-shadow:  0 3rem 3rem rbga(0,0,0,0.3);
+    padding: 3rem;
+    opacity: 0;
+    animation: animatemodal 500ms ease-in forwards;
+}
+
+@keyframes animatemodal {
+
+    to{
+        opacity: 1;
+    }
+    
+}
+.card.theme_modal:hover{
+    background: var(--color-light);
+    opacity: 0.8;
+}
+.card.theme_modal small{
+    margin-top: 0.6rem;
+    display: block;
+    width: 80%;
+    margin-inline: auto;
+}
+
+.theme_primary_wrapper{
+    margin: 3rem 0;
+}
+
+.theme_primary_colors{
+    display: flex;
+    gap: 1rem;
+     justify-content: center;
+     flex-wrap: wrap;
+     margin-top: 1rem;
+}
+.theme_primary_colors button{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme_primary_colors .color-1{
+    background: hsl(270, 76%, 46%);
+}
+.theme_primary_colors .color-2{
+    background: hsl(110, 76%, 46%);
+}
+.theme_primary_colors .color-3{
+    background: hsl(224, 76%, 46%);
+}
+.theme_primary_colors .color-4{
+    background: hsl(80, 56%, 66%);
+}
+.theme_primary_colors .color-5{
+    background: hsl(0, 76%, 46%);
+}
+.theme_primary_colors .color-6{
+    background: hsl(52, 76%, 46%);
+}
+
+.theme_background_colors{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+.theme_background_colors button{
+    width: 7rem;
+    height: 2.5rem;
+    background: white;
+    border-radius: var(--border-radius-3);
+    cursor: pointer;
+}
+
+.theme_background_colors .bg-2{
+    background: black;
+}
+
+
+@media only screen and (max-wdith: 600px) {
+    .card.theme_modal{
+        width: var(--container-width-md);
+        padding: 3rem 1.5rem;
+    }
+    .theme_primary_colors{
+        gap: 0.6rem;
+    }
+    
+}

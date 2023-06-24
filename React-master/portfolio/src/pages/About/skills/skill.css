@@ -1,0 +1,50 @@
+.skill_container{
+    background:var(--color-light);
+    padding: 1.5rem;
+    border:  2px solid transparent;
+    border-radius:  var(--border-radius-1);
+    transition:  var(--transition);
+    cursor: pointer;
+    
+    display: grid;
+    place-items: center;
+    gap: 1.5rem;
+    width: fit-content;
+}
+
+.skill_container:hover{
+    background: transparent;
+    border-color: var(--color-white);
+    transform: translateY(-0.5rem);
+}
+.skill_container.light{
+    background: var(--color-light);
+}
+.icon{
+    font-size: 3rem;
+    background: var(--color-primary);
+    margin-right: 1rem;
+    padding: 0.3rem;
+    color: white;
+    border-radius: var(--border-radius-2);
+    border-color: var(--color-black);
+}
+.skill_icon{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+ justify-content: center;
+}
+.skill_container:hover .icon{
+    background: var(--color-black);
+    transition: var(--transition);
+    border-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .heading{
+        font-size: 1.1rem;
+    }
+    
+}
